@@ -6,21 +6,21 @@ class ApplicationController < Sinatra::Base
     # GET /
   
     get '/items' do
-      items = Message.all.order(:createdata)
+      items = Item.all.order(:createdata)
       items.to_json
     end
   
     # POST /items
   
     post '/items' do
-      item = Message.create(params)
+      item = Item.create(params)
       item.to_json
     end
   
     # PATCH /items/:id
   
     patch '/items/:id' do
-      item = Message.find(params[:id])
+      item = Item.find(params[:id])
       item.update(params)
       item.to_json
     end

@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_05_032727) do
+ActiveRecord::Schema.define(version: 2022_09_05_062913) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "category"
+    t.boolean "isincart"
   end
 
 end

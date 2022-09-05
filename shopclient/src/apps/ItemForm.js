@@ -9,9 +9,9 @@ function ItemForm({onAddItem}) {
     const itemData = {
       name: name,
       category: category,
-      isInCart: false,
+      isincart: false,
     };
-    fetch("http://localhost:4000/items", {
+    fetch("http://localhost:9292/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
